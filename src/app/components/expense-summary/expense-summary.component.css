@@ -1,0 +1,19 @@
+.category-card {
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+  }
+  
+  .category-summary {
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+  /* #category-card{
+    position: relative;
+    left:70%;
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+  } */

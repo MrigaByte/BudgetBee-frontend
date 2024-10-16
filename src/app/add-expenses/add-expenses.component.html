@@ -1,0 +1,57 @@
+<div mat-dialog-title>
+    <h1>Add new Expense</h1>
+</div>
+<form [formGroup]="todoForm" (ngSubmit)="onTodoFormSubmit()">
+    <div mat-dialog-content>
+        <p></p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Description</mat-label>
+                <input matInput placeholder="Enter Expense Description" formControlName="description">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Amount</mat-label>
+                <input matInput placeholder="Enter amount(in rs)" formControlName="amount">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Mode of Payment</mat-label>
+                <input matInput placeholder="Enter payment mode" formControlName="modeOfPayment">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Subcategory</mat-label>
+                <input matInput placeholder="Enter Subcategory" formControlName="subcategory">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Category</mat-label>
+                <input matInput placeholder="Enter Category" formControlName="category">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+        </p>
+        <!-- <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Category</mat-label>
+                <mat-select formControlName="category">
+                    <mat-option value="true">Needs</mat-option>
+                    <mat-option value="true">Savings</mat-option>
+                    <mat-option value="true">Wants</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </p> -->
+    </div>
+    <div mat-dialog-actions>
+        <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+        <button mat-raised-button color="primary" type="submit">{{data ? 'Update' : 'Save'}}</button>
+    </div>
+</form>
